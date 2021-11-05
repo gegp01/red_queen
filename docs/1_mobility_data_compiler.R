@@ -144,4 +144,4 @@ saveRDS(list(work_ny_nona = work_ny_nona
              , work_saopaulo_nona = work_saopaulo_nona
              , recreo_saopaulo_nona = recreo_saopaulo_nona
              , residence_saopaulo_nona = residence_saopaulo_nona
-             ), "time_series_mobility.rds")
+             ), paste(path, "time_series_mobility.rds", sep=""))
