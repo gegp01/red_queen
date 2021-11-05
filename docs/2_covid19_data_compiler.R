@@ -3,7 +3,6 @@
 # 1. COVID19 IN NEW YORK
 # Collect data from USA
 COVID_USA = read.csv('https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv')
-str(COVID_USA)
 
 # Estimate daily accumulated cases 
 nyc = COVID_USA[grep("New York", COVID_USA$state),]
