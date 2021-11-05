@@ -15,7 +15,7 @@ N = N_t1 - N_t0
 # Estimate data on daily cases
 covid_ny = N[-1] # ELIMINAMOS EL PRIMER VALOR, PUES NO SABEMOS CUANTOS HABIA EL DIA ANTERIOR (t_0)
 names(covid_ny) = as.Date(nyc$date)
-
+print("New York data is ready")
 
 # 2. COVID19 IN GREATER LONDON (UNITED KINGDOM)
 # ref: 
@@ -25,6 +25,7 @@ X = aggregate(cases.age.london$cases, list(cases.age.london$date), sum)
 names(X) = c("date", "cases")
 covid_london = X$cases
 names(covid_london) = X$date
+print("Great London data is ready")
 
 # 3. COVID19 IN SANTIAGO CITY (CHILE)
 # Datos oficiales por region.
@@ -53,7 +54,7 @@ x12 = gsub("Dic", "12", x11)
 
 covid_santiago = covid_chile[,"Metropolitana"]*70 # Los datos son: casos/100 000, en una poblacion de 7 millones (region metropolitana en 2017)
 names(covid_santiago) = as.Date(x12, format="%d-%m-%Y")
-
+print("Santiago data is ready")
 ################
 # 4. COVID19 IN SAO PAULO (BRAZIL) 
 # referencia: https://github.com/seade-R/dados-covid-sp
@@ -64,7 +65,7 @@ br2 = aggregate(br$casos_novos, list(br$datahora), sum)
 
 covid_saopaulo = br2$x
 names(covid_saopaulo) = as.Date(br2$Group.1)
-
+print("Sao Paulo data is ready")
 
 # 5. COVID19 IN MEXICO CITY
 covid=read.csv(paste(path2covid_mx, "DGE_data.csv", sep=""), stringsAsFactors=FALSE, colClasses=c(rep("character", 40)))
@@ -76,6 +77,7 @@ covid_cdmx_lab = ifelse(covid_cdmx$RESULTADO_LAB==1, 1, 0)
 
 positivo = ifelse(covid_cdmx_antigeno+covid_cdmx_lab > 0, TRUE, FALSE)
 covid_cdmx_positivo = covid_cdmx[positivo==T,]
+print("Mexico data is ready")
 
 # Compile data on Covid for the cities of interest
 M = list(cases_ny = covid_ny
@@ -84,4 +86,5 @@ M = list(cases_ny = covid_ny
          , cases_saopaulo = covid_saopaulo
          , cases_santiago = covid_santiago)
 
+print("Saving file covid_time_series.rds on path")
 saveRDS(M, paste(path, "covid_time_series.rds", sep=""))
