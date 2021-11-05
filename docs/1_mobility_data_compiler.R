@@ -2,10 +2,10 @@
 # The analysis requires two matrix capturing autocorrelation within the time series: one matrix for covid cases and another one for mobility, for each city
 
 # DATOS DE MOVILIDAD DE GOOGLE. Set path to raw data
-setwd(path)
+path
 
 # UPDATE DATA # collect data @ https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv
-google = read.csv(paste(psth, "Global_Mobility_Report.csv"))
+google = read.csv(paste(path, "Global_Mobility_Report.csv"))
 
 ########################################################
 # 1. Leer datos crudos, una vez descargados al path en localhost
