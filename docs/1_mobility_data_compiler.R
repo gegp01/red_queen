@@ -5,7 +5,7 @@
 path
 
 # UPDATE DATA # collect data @ https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv
-google = read.csv(paste(path, "Global_Mobility_Report.csv"))
+google = read.csv(paste(path, "Global_Mobility_Report.csv", sep=""))
 
 ########################################################
 # 1. Leer datos crudos, una vez descargados al path en localhost
