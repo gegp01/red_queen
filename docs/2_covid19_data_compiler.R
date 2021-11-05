@@ -67,14 +67,7 @@ names(covid_saopaulo) = as.Date(br2$Group.1)
 
 
 # 5. COVID19 IN MEXICO CITY
-source("https://gegp01.github.io/clasificador_Bayes/R/datos_DGE.R")
-#saveRDS(covid, "covid_MX_11_ago_2021.rds")
-path= "~/COVID19_C3/SERIES DE TIEMPO/DATOS/"
-setwd(path)
-saveRDS(covid, "covid_MX_15_sep_2021.rds")
-#covid=readRDS("covid_MX_11_ago_2021.rds")
-
-covid=read.csv("covid_MX/210914COVID19MEXICO.csv", stringsAsFactors=FALSE, colClasses=c(rep("character", 40)))
+covid=read.csv(paste(path2covid_mx, "DGE_data.csv", sep=""), stringsAsFactors=FALSE, colClasses=c(rep("character", 40)))
 covid_cdmx=  covid[covid$ENTIDAD_RES == "09",]
 
 # date = "FECHA_SINTOMAS"
@@ -84,29 +77,11 @@ covid_cdmx_lab = ifelse(covid_cdmx$RESULTADO_LAB==1, 1, 0)
 positivo = ifelse(covid_cdmx_antigeno+covid_cdmx_lab > 0, TRUE, FALSE)
 covid_cdmx_positivo = covid_cdmx[positivo==T,]
 
-# grafica de contagios en cdmx AQUI VAMOS AL 11 DE AGOSTO 2021
-plot(table(covid_cdmx_positivo$FECHA_SINTOMAS)/21581000)
-plot((table(covid_cdmx_positivo$FECHA_SINTOMAS)/21581000)*10000
-     , col="seagreen", type="l"
-     , ylim=c(0, 25), ylab="daily cases of Covid-19 / 10 000 residents"
-     , las=2, axes=T)
-lines((covid_ny/8336817)*10000 , col="blue")
-
-
-#legend("topleft", )
-d = as.Date(c(46, 75, 106, 136, 167,197,228,259, 289, 320, 350, 381, 412, 440, 471, 501, 532, 562), origin="2019-12-31")
-axis(1, d, labels=d, las=2, col="azure")
-axis(2, col="azure", las=2)
-
-legend("topleft", legend = c("New York", "Mexico City"), col=c("blue", "red"), fill = c("blue", "seagreen")
-       , box.lty=0, border=0, bg="transparent")
-
+# Compile data on Covid for the cities of interest
 M = list(cases_ny = covid_ny
          , cases_cdmx = table(covid_cdmx_positivo$FECHA_SINTOMAS)
          , cases_london = covid_london
          , cases_saopaulo = covid_saopaulo
          , cases_santiago = covid_santiago)
 
-path="~/COVID19_C3/SERIES DE TIEMPO/DATOS"
-setwd(path)
-saveRDS(M, "covid_time_series.rds")
+saveRDS(M, paste(path, "covid_time_series.rds", sep=""))
