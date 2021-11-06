@@ -1,6 +1,4 @@
 # Proceso utilizando las series de tiempo precargadas en un RDS
-
-path= "~/COVID19_C3/SERIES DE TIEMPO/DATOS/"
 setwd(path)
 #Q = readRDS("time_series_ny.rds")
 
@@ -42,7 +40,7 @@ SAO =  list(cases_saopaulo = C[["cases_saopaulo"]]
 N_t0 = c(NA, NY[["cases_ny"]]) # Ciudad de México
 N_t1 = c(NY[["cases_ny"]], NA)
 # Y_ny = N_t1/(N_t0 + 1) # como no puede haber ceros en el    numerador, se suma 1.
-Y_ny = N_t1-N_t0 # como no puede haber ceros en el    numerador, se suma 1.
+Y_ny = N_t1-N_t0 # diferencia
 covid_ny = na.exclude(Y_ny)
 
 # Actualizar la lista de series de tiempo de New York
