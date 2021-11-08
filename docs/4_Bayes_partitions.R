@@ -1,6 +1,38 @@
 # DEFINIR TIEMPOS DEL ANÁLISIS (el día 15 de cada mes)
 d = as.Date(c(46, 75, 106, 136, 167,197,228,259, 289, 320, 350, 381, 412, 440, 471, 501, 532, 562, 593, 624), origin="2019-12-31")
-n = 30 # dias de los fragmentos de series de tiempo a anlizar.
+
+
+d = as.Date(c("2021-05-01"
+              , "2021-04-01"
+              , "2021-03-01"
+              , "2021-02-01"
+              , "2021-01-01"
+              , "2020-12-01"
+              , "2020-04-15" # New York's coronavirus mask order by Gov. Andrew Cuomo. Reports suggests a decrease in cases 2 days after!
+              , "2020-04-30"
+              , "2020-05-30"
+              )  
+            ) # fechas
+
+n = 30 # dias de la serie de tiempo
+
+############ FUNCTIONS
+f.intervalo = function(x){-1*(c(n:1) + x-2)} # Determinar el intervalo de tiempo que se analiza: p. ej. 30 dias = c(1:30)
+intervalo = lapply(1:n, f.intervalo)
+
+w = do.call(rbind, intervalo)
+nms = paste("t", 0:(n-1), sep="")
+rownames(w)<- nms
+
+# write.csv(w, "intervalo.csv")
+
+f.time = function(x){
+  as.Date(intervalo[[x]], origin=d[1]) # CAMBIAR ESTE NUMERO PARA HACER LAS FECHAS QUE SIGUEN!
+  }
+
+time=lapply(1:length(intervalo), f.time)
+
+
 
 # Generar la variable de respuesta incrementos en covid.
 Q = NY
