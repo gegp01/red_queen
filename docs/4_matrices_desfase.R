@@ -20,8 +20,6 @@ time=lapply(1:length(intervalo), f.time)
 #t1 = time[length(time):1] # secuencia invertida de tiempo para utlizarla como indice
 f.var = function(x){serie[as.character(time[[x]])]}
 
-Q = SAN # definir la ciudad
-
 serie = Q[[grep("work", names(Q))]]
 WORK = data.frame(lapply(1:n, f.var))
 names(WORK) = paste("t", 0:(n-1), sep="_")
