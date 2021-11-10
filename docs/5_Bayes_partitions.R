@@ -1,23 +1,19 @@
 #Y = RESIDENCE 
 #Y = RECREO
-Y = WORK
+#Y = WORK
 #Y = COVID
 #Y = CASOS
 
-series = Q[["covid_ny"]]
+#series = Q[["covid_ny"]]
 #series = Q[["casos_ny"]]
 
 # INICIA FUNCION DE APP 
-
 Y$covid = series[rownames(Y)]
 
 # Recursive partitioning with Bayes classifier (score)
-
-
 # As a classifier we used score developed bu Stephens et al. 
 
 # REQUIRES THE DATAFRAMEY (red_queen_covid.R)
-
 Y0 = Y
 
 # BAYESIAN CLASSIFIER
@@ -212,10 +208,10 @@ legend(0.8, 0.2, legend=c(no_C_2, no_noC_2), pch=19, col=c("red", "blue"), bg = 
 
 text(0.9,0.55,  paste("mobility > ", round(partition_2[1], 2), "% \n"
                      , delay_2[1], "days before \n in", d[ix]-as.numeric(delay_2[1]), "\n score:", round(score_table_2[names(partition_2[1]),"score"], 2))
-                     , cex = 1)
+                     , cex = 0.8
 
 #text(0.85,0.45, paste(delay_2[1], "days delay: \n", d[ix]-as.numeric(delay_2[1]), "\n score:", round(score_table_2[names(partition_2[1]),"score"], 2)), cex=0.8)
 
 text(0.5, 0.81, paste("mobility > ", round(partition_1[1], 2), "% \n"
                      , delay_1[1], "days before \n in", d[ix]-as.numeric(delay_1[1]), "\n score:", round(score_table_1[names(partition_1[1]),"score"], 2))
-     , cex = 1)
+     , cex = 0.8
