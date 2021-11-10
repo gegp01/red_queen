@@ -193,7 +193,7 @@ names(report) = c("score_table_1"
                   , "score_able_2"
                   , "partition_1"
                   , "partition_2"
-                  , "delay_1",
+                  , "delay_1"
                   , "delay_2"
                   , "best_predictors")
 
