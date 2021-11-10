@@ -181,14 +181,14 @@ names(best_2) = c("mobility", "score", "delay", "date_origin", "date_delay", "pa
 
 BEST_PREDICTORS = rbind(best_1, best_2)
 
-report= list(score_table_1,
-             score_table_2,
-             partition_1,
-             partition_2,
-             delay_1,
-             delay_2,
-             BEST_PREDICTORS)
+report= list(score_table_1 = score_table_1,
+             score_able_2 = score_table_2,
+             partition_1 = partition_1,
+             partition_2 = partition_2,
+             delay_1 = delay_1,
+             delay_2 = delay_2,
+             best_predictors = BEST_PREDICTORS)
 
-report
+print(report)
 
 #print(list(score_table_1 = score_table_1, score_table_2 = score_table_2, best_predictors = BEST_PREDICTORS))
