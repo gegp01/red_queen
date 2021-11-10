@@ -218,4 +218,4 @@ text(0.9,0.55,  paste("mobility > ", round(partition_2[1], 2), "% \n"
 
 text(0.5, 0.81, paste("mobility > ", round(partition_1[1], 2), "% \n"
                      , delay_1[1], "days before \n in", d[ix]-as.numeric(delay_1[1]), "\n score:", round(score_table_1[names(partition_1[1]),"score"], 2))
-     , cex = 0.8
+     , cex = 0.8)
