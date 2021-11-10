@@ -212,7 +212,7 @@ legend(0.8, 0.2, legend=c(no_C_2, no_noC_2), pch=19, col=c("red", "blue"), bg = 
 
 text(0.9,0.55,  paste("mobility > ", round(partition_2[1], 2), "% \n"
                      , delay_2[1], "days before \n in", d[ix]-as.numeric(delay_2[1]), "\n score:", round(score_table_2[names(partition_2[1]),"score"], 2))
-                     , cex = 0.8
+                     , cex = 0.8)
 
 #text(0.85,0.45, paste(delay_2[1], "days delay: \n", d[ix]-as.numeric(delay_2[1]), "\n score:", round(score_table_2[names(partition_2[1]),"score"], 2)), cex=0.8)
 
