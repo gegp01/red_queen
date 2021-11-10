@@ -1,2 +1,2 @@
 # red_queen
-Functions to analyze peoples' activity and Covid-19 cases.
+Functions to analyze people activity and Covid-19 cases.
