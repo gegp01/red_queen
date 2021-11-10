@@ -94,7 +94,7 @@ best.predictor = Xn[predictors[score==max(na.omit(score))]]
 best.predictor = best.predictor[is.na(names(best.predictor))==F]
 
 p = na.exclude(predictors[score==max(na.omit(score))])
-p
+#p
 
 f.quantile=function(x){
   quantile(Y[[p[x]]], probs = (1:10)/10)[8]
@@ -147,7 +147,7 @@ best.predictor = Xn[predictors[score==max(na.omit(score))]]
 best.predictor = best.predictor[is.na(names(best.predictor))==F]
 
 p = na.exclude(predictors[score==max(na.omit(score))])
-p
+#p
 
 class_Xn = sapply(1:length(p), f.quantile)
 names(class_Xn) = p
@@ -160,16 +160,16 @@ si_noC_2 = table(Xn[p[1]])["1 0"]
 no_noC_2 = table(Xn[p[1]])["0 0"]
 no_C_2 = table(Xn[p[1]])["0 1"]
 
-score_table_1
-score_table_2  
-partition_1
-partition_2
+#score_table_1
+#score_table_2  
+#partition_1
+#partition_2
 
 delay_1 = gsub("t_", "", names(partition_1))
 delay_2 = gsub("t_", "", names(partition_2))
 
-delay_1
-delay_2
+#delay_1
+#delay_2
 
 
 # Cuadro resumen
@@ -181,7 +181,7 @@ names(best_2) = c("mobility", "score", "delay", "date_origin", "date_delay", "pa
 
 BEST_PREDICTORS = rbind(best_1, best_2)
 
-# list(score_table_1, score_table_2, BEST_PREDICTORS)
+list(score_table_1, score_table_2, BEST_PREDICTORS)
 
 # Grafica
 plot.new()
