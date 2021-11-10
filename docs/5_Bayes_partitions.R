@@ -173,11 +173,11 @@ delay_2 = gsub("t_", "", names(partition_2))
 
 
 # Cuadro resumen
-best_1 = data.frame(partition_1[1], score = round(score_table_1[names(partition_1[1]),"score"], 2), delay_1, d[ix], d[ix]-as.numeric(delay_1), "part_1")
-best_2 = data.frame(partition_2[1], score = round(score_table_2[names(partition_2[1]),"score"], 2), delay_2, d[ix], d[ix]-as.numeric(delay_2), "part_2")
+best_1 = data.frame(partition_1[1], score = round(score_table_1[names(partition_1[1]),"score"], 2), delay_1, d[ix], d[ix]-as.numeric(delay_1), "part_1", city)
+best_2 = data.frame(partition_2[1], score = round(score_table_2[names(partition_2[1]),"score"], 2), delay_2, d[ix], d[ix]-as.numeric(delay_2), "part_2", city)
 
-names(best_1) = c("mobility", "score", "delay", "date_origin", "date_delay", "partition")
-names(best_2) = c("mobility", "score", "delay", "date_origin", "date_delay", "partition")
+names(best_1) = c("mobility", "score", "delay", "date_origin", "date_delay", "partition", "city")
+names(best_2) = c("mobility", "score", "delay", "date_origin", "date_delay", "partition", "city")
 
 BEST_PREDICTORS = rbind(best_1, best_2)
 
@@ -197,6 +197,7 @@ names(report) = c("score_table_1"
                   , "delay_2"
                   , "best_predictors")
 
-print(report)
-
-#print(list(score_table_1 = score_table_1, score_table_2 = score_table_2, best_predictors = BEST_PREDICTORS))
+write.csv(score_table_1, paste(path2results, "score_table_1","-",city,"-",d[ix],".csv", sep = "")
+write.csv(score_table_2, paste(path2results, "score_table_2","-",city,"-",d[ix],".csv", sep = "")
+write.csv(BEST_PREDICTORS, paste(path2results, "best_predictors","-",city,"-",d[ix],".csv", sep = "")
+          
