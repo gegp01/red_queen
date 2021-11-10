@@ -197,7 +197,7 @@ names(report) = c("score_table_1"
                   , "delay_2"
                   , "best_predictors")
 
-write.csv(score_table_1, paste(path2results, "score_table_1","-",city,"-",d[ix],".csv", sep = "")
-write.csv(score_table_2, paste(path2results, "score_table_2","-",city,"-",d[ix],".csv", sep = "")
-write.csv(BEST_PREDICTORS, paste(path2results, "best_predictors","-",city,"-",d[ix],".csv", sep = "")
+write.csv(score_table_1, paste(path2results, "score_table_1","-",city,"-",d[ix],".csv", sep = ""))
+write.csv(score_table_2, paste(path2results, "score_table_2","-",city,"-",d[ix],".csv", sep = ""))
+write.csv(BEST_PREDICTORS, paste(path2results, "best_predictors","-",city,"-",d[ix],".csv", sep = ""))
           
