@@ -194,7 +194,7 @@ lines(c(0.8, 0.48),c(0.2, 0.45), lty="dashed", lwd=2)
 # PARTITION_1 paste("daily relative cases \n in", n, "days \n"),
 legend(0, 0.8, legend=c("increase", "no increase"), col=c("red", "blue"), pch=19, bg = "azure"
        , title= NULL, box.col="black")
-text(0.1, 0.6, paste("daily relative cases \n within", n, "days, \n before", d[ix]), cex=1)
+text(0.1, 0.6, paste("daily relative cases \n within", n, "days, \n before", d[ix]), cex=0.8)
 
 
 # PARTITION_1
