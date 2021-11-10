@@ -176,6 +176,14 @@ delay_1
 delay_2
 
 
+# Cuadro resumen
+best_1 = data.frame(partition_1[1], score = round(score_table_1[names(partition_1[1]),"score"], 2), delay_1, d[ix]-as.numeric(delay_1))
+best_2 = data.frame(partition_2[1], score = round(score_table_2[names(partition_2[1]),"score"], 2), delay_2, d[ix]-as.numeric(delay_2))
+
+
+
+# Grafica
+
 plot.new()
 lines(c(0.18, 0.4),c(0.74, 0.9), lty="dashed", lwd=2)
 lines(c(0.18, 0.4),c(0.74, 0.5), lty="dashed", lwd=2)
