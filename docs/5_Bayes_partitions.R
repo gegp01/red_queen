@@ -181,4 +181,4 @@ names(best_2) = c("mobility", "score", "delay", "date_origin", "date_delay", "pa
 
 BEST_PREDICTORS = rbind(best_1, best_2)
 
-print(list(score_table_1, score_table_2, BEST_PREDICTORS))
+print(score_table_1, score_table_2, BEST_PREDICTORS)
