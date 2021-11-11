@@ -204,7 +204,8 @@ cross_validation = data.frame(si_C_1
                               , si_C_2
                               , si_noC_2
                               , no_C_2
-                              , no_noC_2)
+                              , no_noC_2
+                              , origin = d[ix])
 
 write.csv(score_table_1, paste(path2results, "score_table_1","-",city,"-",d[ix],".csv", sep = ""))
 write.csv(score_table_2, paste(path2results, "score_table_2","-",city,"-",d[ix],".csv", sep = ""))
