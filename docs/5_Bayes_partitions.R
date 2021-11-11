@@ -18,7 +18,6 @@ Y0 = Y
 
 # BAYESIAN CLASSIFIER
 predictors = paste("t_", 1:(n-1), sep="")
-#y = "mobility"
 y = "covid"
 # y = "C"
 
@@ -27,6 +26,7 @@ y = "covid"
 f.classes = function(x){
   X = Y[, predictors]
 #  p = ifelse(X[,x]>=quantile(X[,x], probs = (1:10)/10)[8], 1, 0)
+# ERROR! EN SAOPAULO "2020-03-01" Y "2020-02-01". No hay casos?
   p = ifelse(X[,x]>quantile(X[,x], probs = (1:10)/10)[8], 1, 0)
   #  q = ifelse(Y[,y]>=quantile(Y[,y], probs = (1:10)/10)[9], 1, 0)
   q = ifelse(Y[,y]>=1, 1, 0) # para y = covid t /covid t-1
