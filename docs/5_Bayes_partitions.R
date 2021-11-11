@@ -197,7 +197,24 @@ names(report) = c("score_table_1"
                   , "delay_2"
                   , "best_predictors")
 
+cross_validation = data.frame(si_C_1
+                              , si_noC_1
+                              , no_C_1
+                              , no_noC_1
+                              , si_C_2
+                              , si_noC_2
+                              , no_C_2
+                              , no_noC_2)
+
 write.csv(score_table_1, paste(path2results, "score_table_1","-",city,"-",d[ix],".csv", sep = ""))
 write.csv(score_table_2, paste(path2results, "score_table_2","-",city,"-",d[ix],".csv", sep = ""))
 write.csv(BEST_PREDICTORS, paste(path2results, "best_predictors","-",city,"-",d[ix],".csv", sep = ""))
-          
+write.csv(cross_validation, paste(path2results, "cross_validation","-",city,"-",d[ix],".csv", sep = ""))
+
+
+
+                              
+                              
+                              
+                              
+                              
