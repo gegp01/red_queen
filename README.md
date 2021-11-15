@@ -20,11 +20,11 @@ Note:
         <ul>
           <li><i>Mobility time series</i>:source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</li>
           <li><i>Covid-19 time series</i>: source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")</i></li>
-      Time series will be stored in path: mobility 
-      <li><i>Clear data from environment</i></li>
-      <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
-      
-    </ul>
+      Time series will be stored in path: mobility
+        </ul>
+       <li><i>Clear data from environment</i></li>
+       <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
+        </ul>
   </li>   
  </ul>
  
