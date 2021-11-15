@@ -12,6 +12,14 @@ Note:
     <li> Download the Global Mobility Report from <a href = "https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv" target="_blank"> Googgle </a> and save it in a local directory</li>
     <li>Download data from <a href= "https://www.gob.mx/salud/documentos/datos-abiertos-152127" target="_blank">Dirección General de Epidemiología en México</a>, and rename the csv data file as covid_mx.csv.</li>
    </ul></li>
-  <li>Run the data compilers of the time series.
+  <li>Open a R terminal:
+  <li>Define path to the directory were the data files are stored, <i>path="path to working directory"</i>
+  <li>Define path to DGE data: path2covid_mx= "path to covid_mx/" 
+    
+  <li>Run compilers of the time series.
+    <li> Mobility time series: <i>source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</i></li>
+    <li> Covid-19 time series: 
+            source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")</i></li>
+  </li>   
  </ul>
  
