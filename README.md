@@ -7,8 +7,8 @@ This repository contains algorithms written in R that decompose time series of d
 
 Note: 
 
-<nl>
+<ul>
   <li>Before running the algorithms data must be gathered from oficial sources in a localhost.</li>
   <li>Run data compiler
- </nl>
+ </ul>
  
