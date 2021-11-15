@@ -14,13 +14,13 @@ Note:
    </ul></li>
   <li>Open a R terminal:
     <ul>
-      <li>Define path to the directory were the data files are stored, <i>path="path to working directory"</i></li>
-      <li>Define path to DGE data: path2covid_mx= "path to covid_mx/"</li>    
-      <li>Run compilers of the time series.
+      <li><i>Define path to the directory were the data files are stored</i>, path="path to working directory"</li>
+      <li><i>Define path to DGE data</i>: path2covid_mx= "path to covid_mx/"</li>    
+      <li><i>Run compilers of the time series</i>.
         <ul>
           <li><i>Mobility time series</i>:source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</li>
           <li><i>Covid-19 time series</i>: source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")</i></li>
-      Time series will be stored in path.
+      <i>Time series will be stored in path</i>.
         </ul>
        <li><i>Clear data from environment</i></li>
        <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
