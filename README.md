@@ -14,8 +14,8 @@ Note:
    </ul></li>
   <li>Open a R terminal:
     <ul>
-      <li><i>Define path to the directory were the data files are stored</i>, path="path to working directory"</li>
-      <li><i>Define path to DGE data</i>: path2covid_mx= "path to covid_mx/"</li>    
+      <li><i>Define path to the directory were the data files are stored</i>, <b>path="path to working directory"</b></li>
+      <li><i>Define path to DGE data</i>: <b>path2covid_mx= "path to covid_mx/"</b></li>    
       <li><i>Run compilers of the time series and these will be saved in path</i>.
         <ul>
           <li><i>Mobility time series</i>:source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</li>
@@ -23,7 +23,7 @@ Note:
         </ul>
        <li><i>Clear data from environment</i></li>
        <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
-       <li>Make a list of the dates to be investigted:<i><br>
+       <li>Make a list of the dates to be investigted:<i><br><b>
          d = as.Date(c("2021-08-01"
               , "2021-07-01"
               , "2021-06-01"
@@ -44,10 +44,10 @@ Note:
               , "2020-04-01"
               , "2020-03-01"
               , "2020-02-01")
-            ) 
+         )</b> 
           <br></li>
           <li><i>Define n, the number of days of the time interval to be analized.</i><br>
-            n = 30
+            <b>n = 30</b>
   </li>
   <li> <i> Change paremeters of the analysis at will:</i><br>
     <b>path2results = "path to the directory where results will be stored"</b> <br>
@@ -60,6 +60,6 @@ Note:
     source("https://gegp01.github.io/red_queen/5_Bayes_partitions.R")
   </li>
         </ul>
-        For each date (ix) and other parameters used, the output will store 4 csv files: Score table for partition 1 and 2 (score_table_1 and score_table_2); coss validation values; and a summary of the best predictors.  
+        <br> For each date (ix) and other parameters used, the output will store 4 csv files: Score table for partition 1 and 2 (score_table_1 and score_table_2); coss validation values; and a summary of the best predictors.  
   </li>   
  </ul>
