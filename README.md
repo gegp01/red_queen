@@ -50,16 +50,16 @@ Note:
             n = 30
   </li>
   <li> <i> Change paremeters of the analysis at will:</i><br>
-    path2results = "path to the directory where results will be stored"
-    Q = NY # The acronim of the city to be anlized: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN). <br>
-    city = "NY_RECREO" # name of the city and the mobility variable of interest. <br>
-    ix = 1 # A number of the date to be investigated, d[ix] is the date.<br>
-    Y = RECREO # choose either mobility at working places (WORK), or mobility at recreational places (RECREO) <br> 
-    series = Q[[grep("covid", names(Q))]] # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
-    <br> <i>Run analysis:</i>
+    <b>path2results = "path to the directory where results will be stored"</b> <br>
+    <b>Q = NY</b> # The acronym of the city to analyse: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN). <br>
+    <b>city = "NY_RECREO"</b> # name of the city and the mobility variable of interest. <br>
+    <b>ix = 1 </b> # A number of the date to be investigated, d[ix] is the date.<br>
+    <b>Y = RECREO </b> # choose either mobility at working places (WORK), or mobility at recreational places (RECREO) <br> 
+    <b>series = Q[[grep("covid", names(Q))]] </b> # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
+    <br><i>Run the analysis:</i>
     source("https://gegp01.github.io/red_queen/5_Bayes_partitions.R")
   </li>
         </ul>
+        For each date (ix) and other parameters used, the output will store 4 csv files: Score table for partition 1 and 2 (score_table_1 and score_table_2); coss validation values; and a summary of the best predictors.  
   </li>   
  </ul>
- 
