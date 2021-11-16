@@ -74,42 +74,56 @@
             <code>
 Open a R terminal:
 
-    <h4>1. Define path to the directory were the data files are stored.</h4>
+ <b>1. Define path to the directory were the data files are stored.</b>
     path ="path to working directory"
     
-    <h4>2. Define path to DGE data.</h4> 
+ <b>2. Define path to DGE data.</b> 
     path2covid_mx = "path to covid_mx/"
     
-    <h4>3. Run compilers of the time series and these will be saved in path.</h4>
+ <b>3. Run compilers of the time series and these will be saved in path.</b>
         source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R") # Mobility time series
         source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R") # Covid-19 time series
 
-    <h4>4. Clear data from environmen t (optional).</h4>
+ <b>4. Clear data from environmen t (optional).</b>
     
-    <b>5. Read time series.</b>
+ <b>5. Read time series.</b>
     source("https://gegp01.github.io/red_queen/3_read_time_series.R")
     
-    3. Make a list of the dates to be investigted:
-    d = as.Date(c("2021-08-01" , "2021-07-01" , "2021-06-01" , "2021-05-01" , "2021-04-01" , "2021-03-01" , "2021-02-01" , "2021-01-01" , "2020-12-01" , "2020-04-15" , "2020-11-01" , "2020-10-01" , "2020-09-01" , "2020-08-01" , "2020-07-01" , "2020-06-01" , "2020-05-01" , "2020-04-01" , "2020-03-01" , "2020-02-01") )
+ <b>3. Make a list of the dates to be investigted.</b>
+    d = as.Date(c("2021-08-01"
+                , "2021-07-01" 
+                , "2021-06-01" 
+                , "2021-05-01" 
+                , "2021-04-01" 
+                , "2021-03-01" 
+                , "2021-02-01" 
+                , "2021-01-01" 
+                , "2020-12-01" 
+                , "2020-04-15" 
+                , "2020-11-01" 
+                , "2020-10-01" 
+                , "2020-09-01" 
+                , "2020-08-01" 
+                , "2020-07-01" 
+                , "2020-06-01" 
+                , "2020-05-01" 
+                , "2020-04-01" 
+                , "2020-03-01" 
+                , "2020-02-01"))
     
-    4. Define n, the number of days of the time interval to be analized.
+ <b>4. Define n, the number of days of the time interval to be analized.</b>
     n = 30
     
-    5. Change paremeters of the analysis at will:
+ <b>5. Change paremeters of the analysis at will.<b>
     
     path2results = "path to the directory where results will be stored"
-    
     Q = NY # The acronym of the city to analyse: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN).
-    
     city = "NY_RECREO" # name of the city and the mobility variable of interest.
-    
     ix = 1 # A number of the date to be investigated, d[ix] is the date.
-    
     Y = RECREO # choose either mobility at working places (WORK), or mobility at recreational places (RECREO)
-    
     series = Q[[grep("covid", names(Q))]] # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
-    
-    6. Run the analysis: 
+
+ <b>6. Run the analysis.</b>
     source("https://gegp01.github.io/red_queen/5_Bayes_partitions.R")
 
             </code>
