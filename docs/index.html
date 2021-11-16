@@ -60,7 +60,7 @@
             <img width=50vh alt="R logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/512px-R_logo.svg.png">
         </div>
         
-        <div class="indented" style="max-width:1500px;"><h3>Minería de datos y análisis de COVID-19 en México</h3>
+        <div class="indented" style="max-width:1500px;"><h3>Anaysis on mobility and daily increases of COVID-19 cases in 5 metropolitan areas (New York (US), London, Sao Paulo (Brazil), Mexico city and Santiago (Chile).</h3>
             Gabriel E. García Peña <br>
             Centro de Ciencias de la Complejidad, <br> Universidad Nacional Autónoma de México
             <br><br>
@@ -137,7 +137,7 @@ Open a R terminal:
     # Choose either mobility at working places (WORK), or mobility at recreational places (RECREO)
     Y = RECREO
     
-    # Name the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
+    # Name the series to analyse: "covid" is the increase in daily cases ({N_t - N_(t-1)})
     series = Q[[grep("covid", names(Q))]] 
     
  <b>6. Run the analysis.</b>
