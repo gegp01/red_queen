@@ -122,12 +122,22 @@ Open a R terminal:
  <b>5. Change paremeters of the analysis at will.</b>
     
     path2results = "path to the directory where results will be stored"
-    Q = NY # The acronym of the city to analyse: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN).
-    city = "NY_RECREO" # name of the city and the mobility variable of interest.
-    ix = 1 # A number of the date to be investigated, d[ix] is the date.
-    Y = RECREO # choose either mobility at working places (WORK), or mobility at recreational places (RECREO)
-    series = Q[[grep("covid", names(Q))]] # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
+    
+    # Define Q, the dataset named by the acronym of the city: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN).
+    Q = NY
+    
+    # Name of the city and the mobility variable of interest. This will be the 
+    city = "NY_RECREO"
+    
+    # A number of the date to be investigated, d[ix] is the date.
+    ix = 1
 
+    # Choose either mobility at working places (WORK), or mobility at recreational places (RECREO)
+    Y = RECREO
+    
+    # Name the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
+    series = Q[[grep("covid", names(Q))]] 
+    
  <b>6. Run the analysis.</b>
     source("https://gegp01.github.io/red_queen/5_Bayes_partitions.R")
 
