@@ -16,14 +16,49 @@ Note:
     <ul>
       <li><i>Define path to the directory were the data files are stored</i>, path="path to working directory"</li>
       <li><i>Define path to DGE data</i>: path2covid_mx= "path to covid_mx/"</li>    
-      <li><i>Run compilers of the time series</i>.
+      <li><i>Run compilers of the time series and these will be saved in path</i>.
         <ul>
           <li><i>Mobility time series</i>:source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</li>
           <li><i>Covid-19 time series</i>: source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")</i></li>
-      <i>Time series will be stored in path</i>.
         </ul>
        <li><i>Clear data from environment</i></li>
        <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
+       <li>Make a list of the dates to be investigted:<i><br>
+         d = as.Date(c("2021-08-01"
+              , "2021-07-01"
+              , "2021-06-01"
+              , "2021-05-01"
+              , "2021-04-01"
+              , "2021-03-01"
+              , "2021-02-01"
+              , "2021-01-01"
+              , "2020-12-01"
+              , "2020-04-15"
+              , "2020-11-01"
+              , "2020-10-01"
+              , "2020-09-01"
+              , "2020-08-01"
+              , "2020-07-01"
+              , "2020-06-01"
+              , "2020-05-01"
+              , "2020-04-01"
+              , "2020-03-01"
+              , "2020-02-01")
+            ) 
+          <br></li>
+          <li><i>Define n, the number of days of the time interval to be analized.</i><br>
+            n = 30
+  </li>
+  <li> <i> Change paremeters of the analysis at will:</i><br>
+    path2results = "path to the directory where results will be stored"
+    Q = NY # The acronim of the city to be anlized: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN). <br>
+    city = "NY_RECREO" # name of the city and the mobility variable of interest. <br>
+    ix = 1 # A number of the date to be investigated, d[ix] is the date.<br>
+    Y = RECREO # choose either mobility at working places (WORK), or mobility at recreational places (RECREO) <br> 
+    series = Q[[grep("covid", names(Q))]] # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
+    <br> <i>Run analysis:</i>
+    source("https://gegp01.github.io/red_queen/5_Bayes_partitions.R")
+  </li>
         </ul>
   </li>   
  </ul>
