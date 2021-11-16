@@ -65,7 +65,7 @@
             Centro de Ciencias de la Complejidad, <br> Universidad Nacional Autónoma de México
             <br><br>
             <figure>
-                <figcaption><h5>
+                <figcaption>
                   Before running the algorithms data must be gathered from oficial sources in a localhost.
                   <br> Download the Global Mobility Report from Googgle and save it in a local directory (path).
                   <br> Download data from Dirección General de Epidemiología en México, and rename the csv data file as covid_mx.csv.
@@ -74,14 +74,19 @@
             <code>
 Open a R terminal:
 
-    1. Define path to the directory were the data files are stored, path="path to working directory"
-    2. Define path to DGE data: path2covid_mx= "path to covid_mx/"
-    3. Run compilers of the time series and these will be saved in path.
+    <h4>1. Define path to the directory were the data files are stored.</h4>
+    path ="path to working directory"
+    
+    <h4>2. Define path to DGE data.</h4> 
+    path2covid_mx = "path to covid_mx/"
+    
+    <h4>3. Run compilers of the time series and these will be saved in path.</h4>
         source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R") # Mobility time series
         source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R") # Covid-19 time series
-    4. Clear data from environment, to release memory
+
+    <h4>4. Clear data from environmen t (optional).</h4>
     
-    5. Read time series: 
+    <b>5. Read time series.</b>
     source("https://gegp01.github.io/red_queen/3_read_time_series.R")
     
     3. Make a list of the dates to be investigted:
@@ -93,10 +98,15 @@ Open a R terminal:
     5. Change paremeters of the analysis at will:
     
     path2results = "path to the directory where results will be stored"
+    
     Q = NY # The acronym of the city to analyse: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN).
+    
     city = "NY_RECREO" # name of the city and the mobility variable of interest.
+    
     ix = 1 # A number of the date to be investigated, d[ix] is the date.
+    
     Y = RECREO # choose either mobility at working places (WORK), or mobility at recreational places (RECREO)
+    
     series = Q[[grep("covid", names(Q))]] # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
     
     6. Run the analysis: 
