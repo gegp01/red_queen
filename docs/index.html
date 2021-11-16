@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Análisis COVID-19</title>
+        <title>Odometer. How fast can we move without increasing Covd-19 cases?</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width">
@@ -66,6 +66,8 @@
             <br><br>
             <figure>
                 <figcaption>
+                  The algorithms contained in this repository are designed to 
+                    
                   Before running the algorithms data must be gathered from oficial sources in a localhost.
                   <br> Download the Global Mobility Report from Googgle and save it in a local directory (path).
                   <br> Download data from Dirección General de Epidemiología en México, and rename the csv data file as covid_mx.csv.
@@ -81,8 +83,11 @@ Open a R terminal:
     path2covid_mx = "path to covid_mx/"
     
  <b>3. Run compilers of the time series and these will be saved in path.</b>
-        source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R") # Mobility time series
-        source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R") # Covid-19 time series
+    # Mobility time series
+    source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")
+    
+    # Covid-19 time series
+    source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")
 
  <b>4. Clear data from environmen t (optional).</b>
     
