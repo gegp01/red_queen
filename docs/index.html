@@ -71,7 +71,7 @@
                  Before running the algorithms data must be gathered from oficial sources in a localhost.
                     <ul>
                         <li> Download the Global Mobility Report from <a href = "https://www.google.com/covid19/mobility/" target="_blank"> Google </a> and save it in a local directory</li>
-                        <li>Download data from <a href= "https://www.gob.mx/salud/documentos/datos-abiertos-152127" target="_blank">DGE, Dirección General de Epidemiología en México</a>, and rename the csv data file as covid_mx.csv.</li>
+                        <li id="DGE">Download data from <a href= "https://www.gob.mx/salud/documentos/datos-abiertos-152127" target="_blank">DGE, Dirección General de Epidemiología en México</a>, and rename the csv data file as covid_mx/DGE_data.csv.</li>
                     </ul>
                 </figcaption>
                 <pre>
@@ -82,7 +82,7 @@ Open a R terminal:
     path ="path to working directory"
     
  <b>2. Define path to DGE data.</b> 
-    path2covid_mx = "path to covid_mx/"
+    path2covid_mx = <a href="#DGE">"path to covid_mx/"</a>
     
  <b>3. Run compilers of the time series and these will be saved in path.</b>
     # Mobility time series
