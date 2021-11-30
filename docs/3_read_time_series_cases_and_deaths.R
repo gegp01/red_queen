@@ -17,14 +17,14 @@ CDMX =  list(cases_cdmx = C[["cases_cdmx"]]
              , work_cdmx_nona = G[["work_cdmx_nona"]]
              , recreo_cdmx_nona = G[["recreo_cdmx_nona"]]
              , residence_cdmx_nona = G[["residence_cdmx_nona"]]
-            , deaths_cdmx = C[["deaths_cdmx"]]))
+            , deaths_cdmx = C[["deaths_cdmx"]])
 
 # Greater London
 LON =  list(cases_london = C[["cases_cdmx"]]
              , work_london_nona = G[["work_london_nona"]]
              , recreo_london_nona = G[["recreo_london_nona"]]
              , residence_london_nona = G[["residence_london_nona"]]
-             , deaths_london = C[["deaths_london"]]))
+             , deaths_london = C[["deaths_london"]])
 
 # Region Metropolitana Santiago de Chile
 SAN =  list(cases_santiago = C[["cases_santiago"]]
@@ -37,7 +37,7 @@ SAO =  list(cases_saopaulo = C[["cases_saopaulo"]]
             , work_saopaulo_nona = G[["work_saopaulo_nona"]]
             , recreo_saopaulo_nona = G[["recreo_saopaulo_nona"]]
             , residence_saopaulo_nona = G[["residence_saopaulo_nona"]]
-           , deaths_saopaulo = C[["deaths_saopaulo"]]))
+           , deaths_saopaulo = C[["deaths_saopaulo"]])
 
 # VARIABLE DE RESPUESTA: Serie de tiempo de aumentos en contagios (> 0) con respecto al dia anterior
 
