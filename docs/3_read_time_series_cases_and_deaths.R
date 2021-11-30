@@ -110,7 +110,6 @@ LON =  list(cases_london = C[["cases_london"]]
              , covid_london = covid_london
              , deaths_london = C[["deaths_london"]]
              , death_change_london = death_change_london)
-)
 
 # Calcular la variable de respuesta en SAO (¿Aumentó con respecto a ayer?)
 N_t0 = c(NA, SAO[["cases_saopaulo"]]) # Sao Paulo
