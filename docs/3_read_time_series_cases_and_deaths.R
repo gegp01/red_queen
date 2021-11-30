@@ -63,7 +63,7 @@ NY = list(cases_ny = C[["cases_ny"]]
           , residence_ny_nona = G[["residence_ny_nona"]]
           , covid_ny = covid_ny
           , deaths_ny = C[["deaths_ny"]]
-          , death_change_ny = death_change_ny)
+          , deaths_change_ny = deaths_change_ny)
 
 # Calcular la variable de respuesta en CDMX (¿Aumentó con respecto a ayer?)
 N_t0 = c(NA, CDMX[["cases_cdmx"]]) # Ciudad de México
@@ -86,7 +86,7 @@ CDMX =  list(cases_cdmx = C[["cases_cdmx"]]
              , residence_cdmx_nona = G[["residence_cdmx_nona"]]
              , covid_cdmx = covid_cdmx
              , deaths_cdmx = C[["deaths_cdmx"]]
-             , death_change_cdmx = death_change_cdmx)
+             , deaths_change_cdmx = deaths_change_cdmx)
 
 # Calcular la variable de respuesta en LON (¿Aumentó con respecto a ayer?)
 N_t0 = c(NA, LON[["cases_london"]]) # London
@@ -109,7 +109,7 @@ LON =  list(cases_london = C[["cases_london"]]
              , residence_london_nona = G[["residence_london_nona"]]
              , covid_london = covid_london
              , deaths_london = C[["deaths_london"]]
-             , death_change_london = death_change_london)
+             , deaths_change_london = deaths_change_london)
 
 # Calcular la variable de respuesta en SAO (¿Aumentó con respecto a ayer?)
 N_t0 = c(NA, SAO[["cases_saopaulo"]]) # Sao Paulo
@@ -132,7 +132,7 @@ SAO =  list(cases_saopaulo = C[["cases_saopaulo"]]
             , residence_saopaulo_nona = G[["residence_saopaulo_nona"]]
             , covid_saopaulo = covid_saopaulo
             , deaths_saopaulo = C[["deaths_saopaulo"]]
-            , death_change_saopaulo = deaths_change_saopaulo)
+            , deaths_change_saopaulo = deaths_change_saopaulo)
 
 # Calcular la variable de respuesta en SAN (¿Aumentó con respecto a ayer?)
 N_t0 = c(NA, SAN[["cases_santiago"]]) # Region Metropolitana (Santiago de Chile)
