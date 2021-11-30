@@ -149,3 +149,4 @@ SAN =  list(cases_santiago = C[["cases_santiago"]]
             , residence_santiago_nona = G[["residence_santiago_nona"]]
             , covid_santiago = covid_santiago)
 
+#
