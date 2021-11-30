@@ -132,7 +132,7 @@ SAO =  list(cases_saopaulo = C[["cases_saopaulo"]]
             , residence_saopaulo_nona = G[["residence_saopaulo_nona"]]
             , covid_saopaulo = covid_saopaulo
             , deaths_saopaulo = C[["deaths_saopaulo"]]
-            , death_change_saopaulo = deaths_change_saopaulo))
+            , death_change_saopaulo = deaths_change_saopaulo)
 
 # Calcular la variable de respuesta en SAN (¿Aumentó con respecto a ayer?)
 N_t0 = c(NA, SAN[["cases_santiago"]]) # Region Metropolitana (Santiago de Chile)
