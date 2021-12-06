@@ -20,7 +20,7 @@ CDMX =  list(cases_cdmx = C[["cases_cdmx"]]
             , deaths_cdmx = C[["deaths_cdmx"]])
 
 # Greater London
-LON =  list(cases_london = C[["cases_cdmx"]]
+LON =  list(cases_london = C[["cases_london"]]
              , work_london_nona = G[["work_london_nona"]]
              , recreo_london_nona = G[["recreo_london_nona"]]
              , residence_london_nona = G[["residence_london_nona"]]
