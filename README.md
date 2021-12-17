@@ -9,8 +9,9 @@ Note:
 <ul>
   <li>Before running the algorithms data must be gathered from oficial sources in a localhost.
   <ul>
-    <li> Download the Global Mobility Report from <a href = "https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv" target="_blank"> Googgle </a> and save it in a local directory</li>
+    <li> Download the Global Mobility Report from <a href = "https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv" target="_blank"> Goggle </a> and save it in a local directory</li>
     <li>Download data from <a href= "https://www.gob.mx/salud/documentos/datos-abiertos-152127" target="_blank">Dirección General de Epidemiología en México</a>, and rename the csv data file as covid_mx/DGE_data.csv.</li>
+    <li>Download data manually from Santiago de Chile: https://e.infogram.com/79acdebc-18ad-4399-8936-bce3b3a49068?parent_url=https%3A%2F%2Fwww.gob.cl%2Fcoronavirus%2Fcifrasoficiales%2F&src=embed#</li> (Save data in path)
    </ul></li>
   <li>Open a R terminal:
     <ul>
