@@ -45,13 +45,13 @@ X2 = aggregate(covid_london_deaths, list(london_date_death), sum)
 deaths.london = X2$x # time series of new deaths in London
 names(deaths.london) = X2$Group.1
 
-print("Great London data is ready")
+print("Greater London data is ready")
 
 # 3. COVID19 IN SANTIAGO CITY (CHILE)
 # Datos oficiales por region.
 # https://e.infogram.com/79acdebc-18ad-4399-8936-bce3b3a49068?parent_url=https%3A%2F%2Fwww.gob.cl%2Fcoronavirus%2Fcifrasoficiales%2F&src=embed#
 # NOTA: LOS DATOS DEBEN BAJARSE MANUALMENTE DEBIDO A LA ESTRUCTURA DE LOS DATOS
-covid_chile = read.csv("~/Downloads/Region.csv")
+covid_chile = read.csv(paste(path, "Region.csv", sep=""))
 chile_dates = covid_chile[,"Region"]
 year.1 = rep(2020, grep("31-Dic", chile_dates)[1])
 year.2 = rep(2021, length(chile_dates)-grep("31-Dic", chile_dates)[1])
