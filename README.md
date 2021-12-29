@@ -7,17 +7,18 @@ This repository contains algorithms written in R that decompose time series of d
 Note: 
 
 <ul>
-  <li>Before running the algorithms data must be gathered from oficial sources in a localhost.
+  <li>Time series for each of the cities analysed have been copiled in 2 files: One with daily mobility another with daily cases of Covid-19. <br> These data can be downloaded an read by the algorithm (3). More details about the source and compilation can be found here: XX </li>
+  <!--li>Before running the algorithms data must be gathered from oficial sources in a localhost.
   <ul>
     <li> Download the Global Mobility Report from <a href = "https://www.gstatic.com/covid19/mobility/Global_Mobility_Report.csv" target="_blank"> Goggle </a> and save it in a local directory</li>
     <li>Download data from <a href= "https://www.gob.mx/salud/documentos/datos-abiertos-152127" target="_blank">Dirección General de Epidemiología en México</a>, and rename the csv data file as covid_mx/DGE_data.csv.</li>
     <li>Download data manually from Santiago de Chile: https://e.infogram.com/79acdebc-18ad-4399-8936-bce3b3a49068?parent_url=https%3A%2F%2Fwww.gob.cl%2Fcoronavirus%2Fcifrasoficiales%2F&src=embed#</li> (Save data in path)
-   </ul></li>
+   </ul></li-->
   <li>Open a R terminal:
-    <ul>
+    <!--ul>
       <li><i>Define path to the directory were the data files are stored</i>, <b>path="path to working directory"</b></li>
       <li><i>Define path to DGE data</i>: <b>path2covid_mx= "path to covid_mx/"</b></li>    
-      <!--li><i>Run compilers of the time series and these will be saved in path</i>.
+      <li><i>Run compilers of the time series and these will be saved in path</i>.
         <ul>
           <li><i>Mobility time series</i>:source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</li>
           <li><i>Covid-19 time series</i>: source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")</i></li>
