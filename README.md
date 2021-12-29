@@ -17,12 +17,12 @@ Note:
     <ul>
       <li><i>Define path to the directory were the data files are stored</i>, <b>path="path to working directory"</b></li>
       <li><i>Define path to DGE data</i>: <b>path2covid_mx= "path to covid_mx/"</b></li>    
-      <li><i>Run compilers of the time series and these will be saved in path</i>.
+      <!--li><i>Run compilers of the time series and these will be saved in path</i>.
         <ul>
           <li><i>Mobility time series</i>:source("https://gegp01.github.io/red_queen/1_mobility_data_compiler.R")</li>
           <li><i>Covid-19 time series</i>: source("https://gegp01.github.io/red_queen/2_covid19_data_compiler.R")</i></li>
         </ul>
-       <li><i>Clear data from environment</i></li>
+       <li><i>Clear data from environment</i></li-->
        <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
        <li>Make a list of the dates to be investigted:<i><br><b>
          d = as.Date(c("2021-08-01"
