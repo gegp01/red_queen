@@ -7,7 +7,7 @@ This repository contains algorithms written in R that decompose time series of d
 Note: 
 
 <ul>
-  <li>Time series for each of the cities analysed have been copiled in 2 files: One with daily mobility another with daily cases of Covid-19. <br> These data can be downloaded an read by the algorithm (3). More details about the source and compilation can be found here: XX </li>
+  <li>Time series for each of the cities analysed have been copiled in 2 files: One with daily mobility ("https://gegp01.github.io/red_queen/time_series_mobility.rds") and another with daily cases of Covid-19 ("https://gegp01.github.io/red_queen/covid_time_series.rds").
 
   <li>Open a R terminal:
   <li><i>Define <b>path = "full path where data is stored"</b></i></li>
