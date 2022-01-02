@@ -25,43 +25,13 @@ Note:
         </ul>
        <li><i>Clear data from environment</i></li-->
        <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
-       <li>Make a list of the dates to be investigted:<i><br><b>
-         d = as.Date(c("2021-08-01"
-              , "2021-07-01"
-              , "2021-06-01"
-              , "2021-05-01"
-              , "2021-04-01"
-              , "2021-03-01"
-              , "2021-02-01"
-              , "2021-01-01"
-              , "2020-12-01"
-              , "2020-04-15"
-              , "2020-11-01"
-              , "2020-10-01"
-              , "2020-09-01"
-              , "2020-08-01"
-              , "2020-07-01"
-              , "2020-06-01"
-              , "2020-05-01"
-              , "2020-04-01"
-              , "2020-03-01"
-              , "2020-02-01")
-         )</b> 
-          <br></li>
-          <li><i>Define n, the number of days of the time interval to be analized.</i><br>
-            <b>n = 30</b>
-  </li>
-  <li> <i> Change paremeters of the analysis at will:</i><br>
-    <b>path2results = "path to the directory where results will be stored"</b> <br>
-    <b>Q = NY</b> # The acronym of the city to analyse: New York (NY), Greater London (LON), Ssao Paulo (SAO), Mexico city (CDMX) or Santiago (SAN). <br>
-    <b>city = "NY_RECREO"</b> # name of the city and the mobility variable of interest. <br>
-    <b>ix = 1 </b> # A number of the date to be investigated, d[ix] is the date.<br>
-    <b>Y = RECREO </b> # choose either mobility at working places (WORK), or mobility at recreational places (RECREO) <br> 
-    <b>series = Q[[grep("covid", names(Q))]] </b> # name of the series to analyse: "covid" is the increase in daily cases (N_t - N_(t-1))
-    <br><i>Run the analysis:</i>
-    source("https://gegp01.github.io/red_queen/5_Bayes_partitions.R")
-  </li>
-        </ul>
-        <br> For each date (ix) and other parameters used, the output will store 4 csv files: Score table for partition 1 and 2 (score_table_1 and score_table_2); coss validation values; and a summary of the best predictors.  
-  </li>   
- </ul>
+       <li><i>Run all the analyses</i><br>
+         <ul>
+           <li>New York <br> <b>source("https://gegp01.github.io/red_queen/red_queen_NY.R")</b></li>
+           <li>Greater London <br> <b>source("https://gegp01.github.io/red_queen/red_queen_LONDON.R")</b></li>
+           <li>Mexico City <br> <b>source("https://gegp01.github.io/red_queen/red_queen_CDMX.R")</b></li>
+           <li>Sao Paulo Brazil <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SAOPAULO.R")</b></li>
+           <li>Santiago de Chile <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SANTIAGO.R")</b></li>
+         </ul>
+       <li> 
+  </ul>
