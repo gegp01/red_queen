@@ -13,7 +13,7 @@ Note:
   <li><i>Define <b>path = "full path where data is stored"</b></i></li>
   <li><i>Define <b>path2results = "full path where result will be stored"</b></i></li>
        <li><i>Read time series</i>:<br><b>source("https://gegp01.github.io/red_queen/3_read_time_series.R")</b></li>
-       <li><i>Run all the analyses</i><br>
+       <li><i>Machine learning. The following algorithms will estimate the parameters of delay between time series and the amount (%) of mobility that maximize the correlation between the time series of mobility and the time series of increases in daily cases of covid-19.</i><br>
          <ul>
            <li>New York <br> <b>source("https://gegp01.github.io/red_queen/red_queen_NY.R")</b></li>
            <li>Greater London <br> <b>source("https://gegp01.github.io/red_queen/red_queen_LONDON.R")</b></li>
@@ -21,5 +21,6 @@ Note:
            <li>Sao Paulo Brazil <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SAOPAULO.R")</b></li>
            <li>Santiago de Chile <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SANTIAGO.R")</b></li>
          </ul>
-       <li> 
+       </li>
+       <li> How well did the machine learned? Once the estimated parameters are obtained, we analyse the data with sensible the statistics. For example, here we (1) analyse the cross-validation errors of our parameters to classify increases in covid-19 cases,  and (2) tested the parameters predict the future increments in covid-19 cases.  
   </ul>
