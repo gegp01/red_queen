@@ -12,7 +12,7 @@ Note:
   <li>Open a R terminal:
   <li><i>Define <b>path = "full path where data is stored"</b></i></li>
   <li><i>Define <b>path2results = "full path where result will be stored"</b></i></li>
-       <li><i>Read time series</i>: source("https://gegp01.github.io/red_queen/3_read_time_series.R")</li>
+       <li><i>Read time series</i>:<br><b>source("https://gegp01.github.io/red_queen/3_read_time_series.R")</b></li>
        <li><i>Run all the analyses</i><br>
          <ul>
            <li>New York <br> <b>source("https://gegp01.github.io/red_queen/red_queen_NY.R")</b></li>
