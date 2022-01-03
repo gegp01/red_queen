@@ -8,7 +8,11 @@ source("https://gegp01.github.io/red_queen/3_read_time_series_cases_and_deaths.R
 
 # 3. Define dates to be used as origin. The algorithm will scan the time series X from the date of origin (d[ix])
 # , towards the past for n days.
-d = as.Date(c("2021-08-01"
+d = as.Date(c("2021-12-01"
+              , "2021-11-01"
+              , "2021-10-01"
+              , "2021-09-01"
+              , "2021-08-01"
               , "2021-07-01"
               , "2021-06-01"
               , "2021-05-01"
@@ -124,5 +128,27 @@ source("https://gegp01.github.io/red_queen/red_queen_city_id_activity.R")
 ix = 17# d[ix] es la fecha de origen para la serie de tiempo a analizar. solo funciona desde "2020-05-01"
 source("https://gegp01.github.io/red_queen/4_matrices_desfase.R")
 source("https://gegp01.github.io/red_queen/red_queen_city_id_activity.R")
+
+####
+ix = 18# d[ix] es la fecha de origen para la serie de tiempo a analizar. solo funciona desde "2020-05-01"
+source("https://gegp01.github.io/red_queen/4_matrices_desfase.R")
+source("https://gegp01.github.io/red_queen/red_queen_city_id_activity.R")
+
+####
+ix = 19# d[ix] es la fecha de origen para la serie de tiempo a analizar. solo funciona desde "2020-05-01"
+source("https://gegp01.github.io/red_queen/4_matrices_desfase.R")
+source("https://gegp01.github.io/red_queen/red_queen_city_id_activity.R")
+
+####
+ix = 20# d[ix] es la fecha de origen para la serie de tiempo a analizar. solo funciona desde "2020-05-01"
+source("https://gegp01.github.io/red_queen/4_matrices_desfase.R")
+source("https://gegp01.github.io/red_queen/red_queen_city_id_activity.R")
+
+####
+ix = 21# d[ix] es la fecha de origen para la serie de tiempo a analizar. solo funciona desde "2020-05-01"
+source("https://gegp01.github.io/red_queen/4_matrices_desfase.R")
+source("https://gegp01.github.io/red_queen/red_queen_city_id_activity.R")
+
+
 
 ######################################
