@@ -21,5 +21,5 @@ f.i_ = function(i_){
   serie2 = as.vector(serie2_)
   names(serie2) = names(serie2_)
   paleta=ifelse(serie1 >= u[as.character(names(o[i_]))], "red", "blue")
-  data.frame(recreo = serie1, daily.cases=serie2, paleta)
+  data.frame(mobility = serie1, daily.cases=serie2, paleta)
   }
