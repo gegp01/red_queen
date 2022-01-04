@@ -7,6 +7,7 @@ X = NY$recreo_ny_nona
 Y = NY$cases_ny
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -31,6 +32,7 @@ Y = y
 names(Y) = names(y)
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -53,6 +55,7 @@ Y = y
 names(Y) = names(y)
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -77,6 +80,7 @@ Y = y
 names(Y) = names(y)
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -99,6 +103,7 @@ X = SAO$work_saopaulo_nona
 Y = SAO$cases_saopaulo
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -121,6 +126,7 @@ X = SAO$work_saopaulo_nona
 Y = SAO$cases_saopaulo
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -144,6 +150,7 @@ X = SAN$work_santiago_nona
 Y = SAN$cases_santiago
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -167,6 +174,7 @@ X = SAN$work_santiago_nona
 Y = SAN$cases_santiago
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -189,6 +197,7 @@ X = LON$work_london_nona
 Y = LON$cases_london
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
@@ -212,6 +221,7 @@ X = LON$work_london_nona
 Y = LON$cases_london
 
 W = do.call(rbind, lapply(c(1:length(d)), f.i_))
+W$day=row.names(W)
 plot(W$daily.cases~as.Date(W$day), col="darkslategrey"
      , type = "l", axes=F, xlab= "", ylab="daily cases of Covid-19")
 points(W$daily.cases~as.Date(W$day), col=W$paleta)
