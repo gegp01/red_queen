@@ -32,7 +32,3 @@ legend("top", legend = c(paste("predictor:", pred_), paste("null:", null_))
 axis(1, at=as.Date(names(Y)), labels = names(Y), las = 2, cex.axis = 0.5, lwd.ticks = 0.1)
 axis(2, las = 2, cex.axis = 0.7)
 
-x = 20000+X[names(Y)]*-400
-lines(x~as.Date(names(X[names(Y)])), col="blue", lty="dotted")
-axis(4, at = c(min(na.omit(x)), median(na.omit(x)), max(na.omit(x)))
-, cex.axis = 0.7, las = 2, col="blue", labels = c(min(na.omit(X)), median(na.omit(X)), max(na.omit(X))))
