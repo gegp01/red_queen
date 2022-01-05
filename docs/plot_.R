@@ -23,7 +23,7 @@ points(Y[as.character(w)]~as.Date(w), col="red")
 pred_ = round(table(Z[w]>0)[2]/sum(table(Z[w]>0)), 2)
 null_ = round(table(Z>0)[2]/sum(table(Z>0)), 2)
 
-legend("topleft", c("daily cases", "mobility %", "increase predicted"), box.lwd=0, cex = 0.7
+legend("topright", c("daily cases", "mobility %", "increase predicted"), box.lwd=0, cex = 0.7
        , inset = 0.05, lty=c("solid", "dotted", NA), pch = c(NA,NA,1), col = c("black", "blue", "red"), bg = "transparent")
 
 legend("top", legend = c(paste("predictor:", pred_), paste("null:", null_))
