@@ -13,7 +13,7 @@ f.prediction = function(i_){
 
 w = unlist(lapply(1:length(d), f.prediction))
 
-
+ 
 par(mai=c(1,1,1,1))
 plot(Y~as.Date(names(Y)), axes = F, ylab = "Covid 19 cases", xlab =""
      , xlim=c(as.Date(-300, origin = "2021-01-01"),"2022-01-01"), type="l")
