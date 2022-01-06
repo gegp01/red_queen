@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Odometer. How fast can we move without increasing Covd-19 cases?</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+        <style>
+            
+        .card {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            background:#f4f6f7;
+         }           
+
+            .card:hover {
+                background:white;
+            }
+
+          .indented {
+          padding-left: 3%;
+          padding-right: 0.5%;
+          }
+            
+        .sticky {
+          position: fixed;
+          top: 85%;
+          left:85%;
+          width: 7%;
+          margin:auto;
+          opacity:0.7;
+        }
+
+          pre {
+            background: #3e484f;
+            border: 1px solid #ddd;
+            // border-left: 3px solid #f36d33;
+            color: white;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1em;
+            display: block;
+            word-wrap: break-word;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <div class="sticky">
+            <img width=100vh alt="C3" src = "https://www.c3.unam.mx/image/logo.png" style="background-color: #3e484f;">
+            <br><br>
+            <img width=50vh alt="R logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/512px-R_logo.svg.png">
+        </div>
+        <div class="indented" style="max-width:1000px;"><h3>Analysis on the relaionships between mobility and daily increases of COVID-19 cases in 5 metropolitan areas: New York (United States), Greater London (United Kingdom), Sao Paulo (Brazil), Mexico city (Mexico) and Santiago (Chile).</h3>
+            Gabriel E. García Peña <br>
+            Centro de Ciencias de la Complejidad, <br> Universidad Nacional Autónoma de México
+            <br><br>
+            <figure>
+                <figcaption>
+                  Currently humanity is dealing with an evoltionary arm race against the novel coronavirus SARS-CoV-2, that have caused human suffering and 5 million deaths worldwide by Covid-19. In this race, regulating our mobility, using face masks and vaccination have been key in controlling the daily increase of Covid-19 cases. However restricting mobility has costs on household economy and wellbeing. <br><br>This repository contains algorithms written in R that decompose time series of daily Covid-19 cases, and mobility data from mobile devices. <br><br>Together the algorithms update and compile data from 5 mtropolitan areas (New York US, Greater London UK, Sao Paulo Brazil, Mexico city, and Santiago de Chile). Then, Bayesian statistics and machine learning are used to find the mobility events from the past that explain the increase in daily cases of Covid-19, within a time interval.
+                 <br><br> 
+                 Before running the algorithms data must be gathered from oficial sources in a localhost.
+                    <ul>
+                        <li> Download the Global Mobility Report from <a href = "https://www.google.com/covid19/mobility/" target="_blank"> Google </a> and save it in a local directory</li>
+                        <li id="DGE">Download data from <a href= "https://www.gob.mx/salud/documentos/datos-abiertos-152127" target="_blank">DGE, Dirección General de Epidemiología en México</a>, and rename the csv data file as covid_mx/DGE_data.csv.</li>
+                    </ul>
+                    
+                    <ul><li>Time series for each of the cities analysed have been copiled in 2 files: <ul><li>Time series of daily mobility ("https://gegp01.github.io/red_queen/time_series_mobility.rds")</li><li> Time series of daily cases of Covid-19 ("https://gegp01.github.io/red_queen/covid_time_series.rds")
+                    </li></ul>
+                    
+                </figcaption>
+                <pre>
+            <code>
+            <li>Open a R terminal:
+            <li><i>Define <b>path = "full path where data is stored"</b></i></li>
+            <li><i>Define <b>path2results = "full path where result will be stored"</b></i></li>
+            <li><i>Read time series</i>:<br><b>source("https://gegp01.github.io/red_queen/3_read_time_series.R")</b></li>
+            <li><b><i>Machine learning</i></b>. The following algorithms will estimate the parameters of delay between time series and the amount (%) of mobility that maximize the correlation between the time series of mobility and the time series of increases in daily cases of covid-19.<br>
+            <ul>
+            <li>New York <br> <b>source("https://gegp01.github.io/red_queen/red_queen_NY.R")</b></li>
+            <li>Greater London <br> <b>source("https://gegp01.github.io/red_queen/red_queen_LONDON.R")</b></li>
+            <li>Mexico City <br> <b>source("https://gegp01.github.io/red_queen/red_queen_CDMX.R")</b></li>
+            <li>Sao Paulo Brazil <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SAOPAULO.R")</b></li>
+            <li>Santiago de Chile <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SANTIAGO.R")</b></li>
+            </ul>
+            </li>
+            <li><i><b>How well did the machine learned?</b></i> Once the estimated parameters are obtained, we analyse the data with sensible the statistics. For example, here we (1) analyse the cross-validation errors of our parameters to classify increases in covid-19 cases,  and (2) tested whether the parameters can predict future increments in covid-19 cases.</li>
+            </code>
+            </pre>
+            </figure>
+        </div>
+    </body>
+</html>
