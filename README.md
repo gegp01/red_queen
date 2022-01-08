@@ -22,5 +22,5 @@ Note:
            <li>Santiago de Chile <br> <b>source("https://gegp01.github.io/red_queen/red_queen_SANTIAGO.R")</b></li>
          </ul>
        </li>
-  <li><i><b>How well did the machine learned?</b></i> Once the estimated parameters are obtained, we analyse the data with sensible the statistics. For example, here we (1) analyse the cross-validation errors of our parameters to classify increases in covid-19 cases,  and (2) tested whether the parameters can predict future increments in covid-19 cases.  
+  <li><i><b>How well did the machine learn?</b></i> Once the estimated parameters are obtained, we analyse the data with sensible the statistics. For example, here we (1) analyse the cross-validation errors of our parameters to classify increases in covid-19 cases,  and (2) tested whether the parameters can predict future increments in covid-19 cases.  
   </ul>
