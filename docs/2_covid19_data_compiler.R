@@ -30,7 +30,9 @@ print("Great London data is ready")
 # Datos oficiales por region.
 # https://e.infogram.com/79acdebc-18ad-4399-8936-bce3b3a49068?parent_url=https%3A%2F%2Fwww.gob.cl%2Fcoronavirus%2Fcifrasoficiales%2F&src=embed#
 # NOTA: LOS DATOS DEBEN BAJARSE MANUALMENTE DEBIDO A LA ESTRUCTURA DE LOS DATOS
-covid_chile = read.csv(paste(path, "Region.csv", sep=""))
+# covid_chile = read.csv(paste(path, "Region.csv", sep="")) # deprecated
+covid_chile = read.csv("https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto13/CasosNuevosCumulativo_T.csv")
+
 chile_dates = covid_chile[,"Region"]
 year.1 = rep(2020, grep("31-Dic", chile_dates)[1])
 year.2 = rep(2021, length(chile_dates)-grep("31-Dic", chile_dates)[1])
