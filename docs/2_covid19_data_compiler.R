@@ -55,7 +55,7 @@ chile_dates = covid_chile[,"Region"]
 
 covid_santiago = covid_chile[,"Metropolitana"]*70 # Los datos son: casos/100 000, en una poblacion de 7 millones (region metropolitana en 2017)
 #names(covid_santiago) = as.Date(x12, format="%d-%m-%Y")
-names(covid_santiago) = as.Date(covid_dates, format="%Y-%m-%d")
+names(covid_santiago) = as.Date(chile_dates, format="%Y-%m-%d")
 
 print("Santiago data is ready")
 ################
