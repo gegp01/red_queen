@@ -19,7 +19,7 @@ mx = m[grep("Mexico", m$virus_name),]
 
 # Cut the tree from the global phylogeny
 
-nms = mx$accesion_id
+nms = mx$accession_id
 
 no_nms = v$tip.label[is.na(match(v$tip.label, nms))]
 # prune phylogeny
