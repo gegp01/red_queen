@@ -27,6 +27,7 @@ no_nms = v$tip.label[is.na(match(v$tip.label, nms))]
 mx_tree = drop.tip(v, no_nms)
 # mx_tree = keep.tip(v, nms)
 
+
 L = list(
   may_2020 = mx$accession_id[grep("2020-05", mx$collection_date)]
   , jun_2020 = mx$accession_id[grep("2020-06", mx$collection_date)]
@@ -51,51 +52,38 @@ L = list(
   , ene_2022 = mx$accession_id[grep("2022-01", mx$collection_date)]
 )
 
-f.sampler = function(x){sample(L[[x]], 100)}
+f.sampler = function(x){sample(L[[x]], 50)}
 L_100 = lapply(1:length(L), f.sampler)
+names(L_100) = names(L)
 
-t1 = keep.tip(mx_tree, L_100[[1]])
+plot.function = function(x) {
+  t1 = keep.tip(mx_tree, L_100[[x]])
+  d = cophenetic(t1)
+  d_ = 1-d/max(d) # la distancia se transforma como una proporción y se le resta a 1, para representar la conectividad en cada vertice
+  
+  svg(paste(names(L_100[x]), ".svg", sep=""))
+  qgraph(d_, layout='spring', vsize=3)
+#  text(0,1, names(L_100[x]))
+  legend("bottomleft", cex = 0.7, ncol=1, text.width = 0.5, bg ="transparent"
+         , box.lwd=0, x.intersp= 0.05, y.intersp = 0.7, inset=0.01
+         , c( paste(names(quantile(d)), "<", quantile(d)))
+         , title = paste(names(L_100[x]),"\n phylogenetic distances")) # legend=quantile(d))
+  dev.off()
+}
 
-##########################
-library(igraph)
-library(networkD3)
+# lapply(1, plot.function)
 
-# Create data
-data=matrix(sample(0:1, 400, replace=TRUE, prob=c(0.95,0.05) ), nrow=20)
-
-# Tell Igraph it is an adjency matrix... with default parameters
-network=graph_from_adjacency_matrix(data)
-
-# transform Igraph format in something readable by networkD3
-network=igraph_to_networkD3(network)
-
-# plot
-simpleNetwork(network$links,
-        height = 480,                     # height of frame area in pixels
-        width = 480,
-        linkDistance = 120,               # distance between node. Increase this value to have more space between nodes
-        charge = -480,                    # numeric value indicating either the strength of the node repulsion (negative value) or attraction (positive value)
-        fontSize = 27,                    # size of the node names
-        linkColour = rgb(0.1,0.9,0.1,0.3),# colour of edges, MUST be a common colour for the whole graph
-        nodeColour = "forestgreen",       # colour of nodes, MUST be a common colour for the whole graph
-        opacity = 0.9,                    # opacity of nodes. 0=transparent. 1=no transparency
-)
+lapply(1:length(L_100), plot.function)
 
 
 
-
-# genetic distance between samples, but tree is too big.
-d = cophenetic(mx_tree)
-Error in dist.nodes(x) : tree too big
-
-
-
-
-
-
-
-
-
+# By specifying layout="spring" the Fruchterman-
+#  reingold algorithm (Fruchterman & Reingold, 1991), which has been ported from the SNA package
+# (Butts, 2010), can be used to create a force-directed layout. In principle, what this function does
+# is that each node (connected and unconnected) repulse each other, and connected nodes also attract
+# each other. Then after a number of iterations (500 by default) in which the maximum displacement
+# of each node becomes smaller a layout is achieved in which the distance between nodes correspond
+# very well to the absolute edge weight between those nodes
 # Perform phylogeographic analyses (coalescence) with the sequences.
 
 
